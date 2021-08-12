@@ -10,14 +10,14 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      label: "Default"
     };
   });
 
   const renderComponent = () => render(<Button {...props} />);
 
   it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+    props.label = "harvey was here";
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("Button");

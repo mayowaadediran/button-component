@@ -5,8 +5,8 @@ import { ButtonProps } from "./Button.types";
 
 import "./Button.scss";
 
-const Button: React.FC<ButtonProps> = ({ foo }) => (
-    <div data-testid="Button" className="foo-bar">{foo}</div>
+const Button = ({ variant, label } : ButtonProps) => (
+    <button data-testid="Button" className="button">{label}</button>
 );
 
 export default Button;

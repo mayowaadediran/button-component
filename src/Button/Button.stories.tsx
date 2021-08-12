@@ -2,10 +2,12 @@
 import React from "react";
 import Button from "./Button";
 
+import { Meta } from '@storybook/react';
+
 export default {
-    title: "Button"
-};
+    title: "Button",
+    component: Button
+} as Meta
 
-export const WithBar = () => <Button foo="bar" />;
+export const Default = () => <Button label="Default" />;
 
-export const WithBaz = () => <Button foo="baz" />;
