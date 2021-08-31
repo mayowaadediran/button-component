@@ -2,12 +2,29 @@
 import React from "react";
 import Button from "./Button";
 
-import { Meta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
     title: "Button",
     component: Button
-} as Meta
+} as ComponentMeta<typeof Button>;
 
-export const Default = () => <Button label="Default" />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+
+export const Default = Template.bind({});
+Default.args = {
+  label: 'Button',
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+  label: 'Button',
+  variant: 'outline'
+};
+
+export const Text = Template.bind({});
+Text.args = {
+  label: 'Button',
+  variant: 'text'
+};

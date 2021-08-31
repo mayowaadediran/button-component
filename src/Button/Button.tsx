@@ -5,9 +5,21 @@ import { ButtonProps } from "./Button.types";
 
 import "./Button.scss";
 
-const Button = ({ variant, label } : ButtonProps) => (
-    <button data-testid="Button" className="button">{label}</button>
-);
-
+const Button = ({
+  variant,
+  label = "Button",
+  disableShadow = false,
+  disabled = false,
+  ...props
+}: ButtonProps) => {
+  return (
+    <button
+      data-testid="Button"
+      className={`button button--${variant}`}
+      {...props}
+    >
+      {label}
+    </button>
+  );
+};
 export default Button;
-

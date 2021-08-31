@@ -5,4 +5,17 @@ export interface ButtonProps {
    * Button contents
    */
   label: string;
+
+  disableShadow?: boolean;
+
+  disabled?: boolean;
+
+  startIcon?:  JSX.Element;
+
+  endIcon?: JSX.Element;
+
+  size?: 'sm' | 'md' | 'lg';
+
+  color?: 'default' | 'primary' | 'secondary' | 'danger';
+
 }
