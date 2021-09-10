@@ -2,29 +2,37 @@
 import React from "react";
 import Button from "./Button";
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 export default {
-    title: "Button",
-    component: Button
+  title: "Button",
+  component: Button,
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Button',
+  label: "Button",
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
-  label: 'Button',
-  variant: 'outline'
+  label: "Button",
+  variant: "outline",
 };
 
 export const Text = Template.bind({});
 Text.args = {
-  label: 'Button',
-  variant: 'text'
+  label: "Button",
+  variant: "text",
 };
+
+export const DisabledShadow = Template.bind({});
+DisabledShadow.args = {
+  label: "Button",
+  variant: "text",
+  disabledShadow: true,
+};
+
+export const Disabled = () => <Button disabled label="Disabled" />;

@@ -12,10 +12,11 @@ const Button = ({
   disabled = false,
   ...props
 }: ButtonProps) => {
+  const btnDisabled = disabled ? `button--disabled` : ``;
   return (
     <button
       data-testid="Button"
-      className={`button button--${variant}`}
+      className={`button button--${variant} ${btnDisabled}`}
       {...props}
     >
       {label}

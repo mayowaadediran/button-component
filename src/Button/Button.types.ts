@@ -1,21 +1,22 @@
 // Generated with util/create-component.js
 export interface ButtonProps {
-    variant?: 'outline' | 'text';
-    /**
+  variant?: "outline" | "text";
+  /**
    * Button contents
    */
-  label: string;
+  label?: string;
 
   disableShadow?: boolean;
 
   disabled?: boolean;
 
-  startIcon?:  JSX.Element;
+  startIcon?: JSX.Element;
 
   endIcon?: JSX.Element;
 
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
 
-  color?: 'default' | 'primary' | 'secondary' | 'danger';
+  color?: "default" | "primary" | "secondary" | "danger";
 
+  onClick?: () => void;
 }
